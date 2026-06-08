@@ -1,12 +1,14 @@
 from loaders.directory_loader import MyDirectoryLoader
 from loaders.pdf_loader import MyPdfLoader
 from loaders.text_loader import MyTextLoader
+from loaders.csv_loader import MyCSVLoader
 
 loader = MyDirectoryLoader(
     path="6. DocumentLoaders/documents",
     loaders={
         ".pdf": MyPdfLoader,
-        ".txt": MyTextLoader
+        ".txt": MyTextLoader,
+        ".csv": MyCSVLoader,
     }
 )
 
