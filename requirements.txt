@@ -3,5 +3,8 @@ langchain-core
 langchain-google-genai
 langchain-groq
 langchain-huggingface
+langchain-chroma
 pypdf
 sentence-transformers
+chromadb
+faiss-cpu
