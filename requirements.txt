@@ -4,7 +4,8 @@ langchain-google-genai
 langchain-groq
 langchain-huggingface
 langchain-chroma
+langchain-qdrant
 pypdf
 sentence-transformers
 chromadb
-faiss-cpu
+qdrant-client
