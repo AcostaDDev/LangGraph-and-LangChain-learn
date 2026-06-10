@@ -9,3 +9,4 @@ pypdf
 sentence-transformers
 chromadb
 qdrant-client
+wikipedia
