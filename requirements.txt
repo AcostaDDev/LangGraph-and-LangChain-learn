@@ -2,4 +2,6 @@ langchain
 langchain-core
 langchain-google-genai
 langchain-groq
+langchain-huggingface
 pypdf
+sentence-transformers
