@@ -1,5 +1,5 @@
+import fitz
 from typing import Iterator
-from pypdf import PdfReader
 from langchain_core.document_loaders import BaseLoader
 from langchain_core.documents import Document
 
@@ -9,18 +9,18 @@ class MyPdfLoader(BaseLoader):
         self.file_path = file_path
 
     def lazy_load(self) -> Iterator[Document]:
-        reader = PdfReader(self.file_path)
-        total_pages = len(reader.pages)
+        doc = fitz.open(self.file_path)
+        total_pages = doc.page_count
 
-        pdf_meta = reader.metadata or {}
+        pdf_meta = doc.metadata or {}
 
-        producer = pdf_meta.get("/Producer", "")
-        creator = pdf_meta.get("/Creator", "")
-        creation_date = pdf_meta.get("/CreationDate", "")
-        title = pdf_meta.get("/Title", "")
+        producer = pdf_meta.get("producer", "")
+        creator = pdf_meta.get("creator", "")
+        creation_date = pdf_meta.get("creationDate", "")
+        title = pdf_meta.get("title", "")
 
-        for n_page, page in enumerate(reader.pages):
-            text = page.extract_text()
+        for n_page, page in enumerate(doc):
+            text = page.get_text()
             if text.strip():
                 yield Document(
                     page_content=text,
@@ -35,3 +35,4 @@ class MyPdfLoader(BaseLoader):
                         'page_label': str(n_page + 1)
                     }
                 )
+        doc.close()
