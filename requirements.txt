@@ -13,3 +13,5 @@ qdrant-client
 wikipedia
 streamlit
 torchvision
+
+langgraph
