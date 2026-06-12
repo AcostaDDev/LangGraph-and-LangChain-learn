@@ -19,7 +19,7 @@ load_dotenv()
 
 MyPdfLoader = import_loader("pdf_loader")
 
-loader = MyPdfLoader("11. RAG/documents/tfm-david.pdf")
+loader = MyPdfLoader("LangChain/11. RAG/documents/tfm-david.pdf")
 documents = loader.load()
 
 llm = ChatGroq(model="llama-3.3-70b-versatile")

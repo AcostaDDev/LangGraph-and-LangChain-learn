@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 from typing import List
 from dotenv import load_dotenv
@@ -17,7 +17,7 @@ from langchain_core.documents import Document
 from utils.import_loader import import_loader
 
 load_dotenv()
-DOC_FOLDER = "11. RAG/documents/"
+DOC_FOLDER = "LangChain/11. RAG/documents/"
 
 MyPDFLoader = import_loader("pdf_loader")
 MyDirectoryLoader = import_loader("directory_loader")

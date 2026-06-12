@@ -9,7 +9,7 @@ load_dotenv()
 # 1. Load a pdf document
 from utils.import_loader import import_loader
 MyPdfLoader = import_loader("pdf_loader")
-loader = MyPdfLoader("11. RAG/documents/tfm-david.pdf")
+loader = MyPdfLoader("LangChain/11. RAG/documents/tfm-david.pdf")
 documents = loader.load()
 
 # 2. Split Documents into chunks

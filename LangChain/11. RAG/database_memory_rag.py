@@ -96,7 +96,7 @@ session_id = st.session_state.session_id
 # Load and index pdf
 @st.cache_resource
 def load_vector_store() -> Chroma:
-    loader = MyPdfLoader("11. RAG/documents/tfm-david.pdf")
+    loader = MyPdfLoader("LangChain/11. RAG/documents/tfm-david.pdf")
     documents = loader.load()
 
     splitter = RecursiveCharacterTextSplitter(

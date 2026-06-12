@@ -7,7 +7,7 @@ from langchain_core.document_loaders import BaseLoader
 
 def import_loader(mod_name: str) -> Type[BaseLoader]:
     
-    file_path = f"6. DocumentLoaders/loaders/{mod_name}.py"
+    file_path = f"LangChain/6. DocumentLoaders/loaders/{mod_name}.py"
 
     spec = importlib.util.spec_from_file_location(mod_name, file_path)
     module = importlib.util.module_from_spec(spec)

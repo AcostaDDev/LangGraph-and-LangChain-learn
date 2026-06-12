@@ -7,7 +7,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from utils.import_loader import import_loader
 
 MyPdfLoader = import_loader("pdf_loader")
-loader = MyPdfLoader("7. TextSplitters/documents/example.pdf")
+loader = MyPdfLoader("LangChain/7. TextSplitters/documents/example.pdf")
 
 docs = loader.load()
 

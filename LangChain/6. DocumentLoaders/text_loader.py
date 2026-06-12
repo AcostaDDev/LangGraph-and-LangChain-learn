@@ -1,7 +1,7 @@
 from loaders.text_loader import MyTextLoader
 
 
-loader = MyTextLoader("6. DocumentLoaders/documents/cricket.txt")
+loader = MyTextLoader("LangChain/6. DocumentLoaders/documents/cricket.txt")
 
 docs = loader.load()
 
