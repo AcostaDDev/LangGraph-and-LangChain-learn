@@ -11,3 +11,5 @@ sentence-transformers
 chromadb
 qdrant-client
 wikipedia
+streamlit
+torchvision
